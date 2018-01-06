@@ -98,20 +98,3 @@ void    ssd1306_128x64_i2c_init()
     ssd1306_i2cInit();
     ssd1306_128x64_init();
 }
-
-void   ssd1306_128x64_spi_init(int8_t rstPin, int8_t cesPin, int8_t dcPin)
-{
-    if (rstPin >=0)
-    {
-        pinMode(rstPin, OUTPUT);
-        digitalWrite(rstPin, HIGH);
-        /* Wait at least 1ms after VCC is up for LCD */
-        delay(1);
-        /* Perform reset operation of LCD display */
-        digitalWrite(rstPin, LOW);
-        delay(10);
-        digitalWrite(rstPin, HIGH);
-    }
-    ssd1306_spiInit(cesPin, dcPin);
-    ssd1306_128x64_init();
-}
