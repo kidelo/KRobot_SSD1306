@@ -26,11 +26,7 @@
 
 #include "nano_gfx_types.h"
 #include "i2c/ssd1306_i2c_conf.h"
-#include "spi/ssd1306_spi_conf.h"
 #include "lcd/ssd1306_128x64.h"
-#include "lcd/ssd1306_128x32.h"
-#include "lcd/sh1106_128x64.h"
-#include "lcd/pcd8544_84x48.h"
 
 #ifdef __cplusplus
 extern "C" {

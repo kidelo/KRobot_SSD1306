@@ -28,7 +28,6 @@
 
 #include "ssd1306.h"
 #include "i2c/ssd1306_i2c.h"
-#include "spi/ssd1306_spi.h"
 #include <stdint.h>
 #include "Print.h"
 
@@ -121,7 +120,7 @@ public:
      * @param csPin - chip enable pin to LCD slave (-1 if not used)
      * @param dcPin - data/command pin to control LCD dc (required)
      */
-    void beginSPI(int8_t csPin = -1, int8_t dcPin = -1) { ssd1306_spiInit(csPin, dcPin); m_init(); };
+    // void beginSPI(int8_t csPin = -1, int8_t dcPin = -1) { };
 
     /**
      * Turns off display
